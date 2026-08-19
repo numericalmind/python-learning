@@ -1,34 +1,79 @@
-# Python Learning
+# Python Learning 🐍
 
-My Python learning journey and practice projects.
+My Python learning journey through hands-on projects, progressing from Python fundamentals to data analysis and visualization.
 
 ## Projects
 
-### Grade Calculator
+### 01 — Grade Calculator 🎓
 
-Grade Calculator helps students determine their letter grade based on their average grade. 
+A simple Python program that calculates a student's average grade and assigns a letter grade.
 
-## What does it do?
-A simple Python program that:
-- Takes a student's name
-- Takes three grades
-- Calculates the average
-- Assigns a letter grade based on the average
-
-## Concepts Practiced
-- Variables
-- User input
-- Basic arithmetic operations
-- Conditional statements (`if`, `elif`, `else`)
+**Concepts practiced:**
+- Variables and user input
+- Arithmetic operations
+- Conditional statements
 - Comparison operators
-- Type conversion (`float()`)
+- Type conversion
 
-## How to Run
+📁 [`01-grade-calculator`](./01-grade-calculator)
 
-1. Make sure Python is installed.
-2. Open the terminal in the project folder.
-3. Run the following command:
+---
 
-```bash
-python grade_calculator.py
-```
+### 02 — Expense Analyzer 💰
+
+A data analysis project for exploring and summarizing personal expense data using Python.
+
+**Concepts practiced:**
+- Pandas DataFrames
+- Data cleaning and manipulation
+- Grouping and aggregation
+- Basic statistical analysis
+- Data visualization with Matplotlib
+
+📁 [`02-expense-analyzer`](./02-expense-analyzer)
+
+---
+
+### 03 — Climate Data Explorer 🌍
+
+A climate data analysis project exploring long-term changes in Turkey's annual average surface temperature from 1940 to 2025.
+
+**Concepts practiced:**
+- Real-world data exploration
+- Pandas filtering
+- Descriptive statistics
+- Time-series analysis
+- 10-year moving averages
+- Linear trend estimation with NumPy
+- Data visualization with Matplotlib
+
+**Key finding:**  
+The analysis estimates an overall linear temperature trend of approximately **+0.28 °C per decade** for Turkey over the 1940–2025 period.
+
+📁 [`03-climate-data-explorer`](./03-climate-data-explorer)
+
+---
+
+## Technologies
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Jupyter Notebook
+- Git & GitHub
+
+## Learning Progress
+
+This repository documents my progression from Python fundamentals toward data analysis, scientific computing, and real-world problem solving.
+
+Each project focuses on applying newly learned concepts through practical implementation rather than isolated exercises.
+
+## Repository Structure
+
+```text
+python-learning/
+├── 01-grade-calculator/
+├── 02-expense-analyzer/
+├── 03-climate-data-explorer/
+└── README.md
