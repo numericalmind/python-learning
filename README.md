@@ -54,6 +54,23 @@ The analysis estimates an overall linear temperature trend of approximately **+0
 
 ---
 
+### 4. Particle Collision EDA ⚛️
+
+An exploratory data analysis project using simulated high-energy physics collision data from the HIGGS dataset.
+
+**What I practiced:**
+- Descriptive statistics
+- Signal vs background comparison
+- Grouping and aggregation with Pandas
+- Pearson correlation analysis
+- Scientific data visualization with Matplotlib
+
+**Key finding:** Among the selected features, `missing_energy` and `m_wwbb` showed the strongest positive linear relationship (**r ≈ 0.313**).
+
+📁 [View Project](./04-particle-collision-eda)
+
+---
+
 ## Technologies
 
 - Python
@@ -73,7 +90,26 @@ Each project focuses on applying newly learned concepts through practical implem
 
 ```text
 python-learning/
-├── 01-grade-calculator/
+│
+├── grade_calculator.py
+│
 ├── 02-expense-analyzer/
+│   ├── expense_analyzer.py
+│   ├── expenses.csv
+│   └── README.md
+│
 ├── 03-climate-data-explorer/
+│   ├── climate_analysis.py
+│   ├── data/
+│   ├── visualizations/
+│   └── README.md
+│
+├── 04-particle-collision-eda/
+│   ├── analysis.py
+│   ├── higgs_train_10k.csv
+│   ├── correlation_plot.png
+│   ├── requirements.txt
+│   └── README.md
+│
 └── README.md
+```
