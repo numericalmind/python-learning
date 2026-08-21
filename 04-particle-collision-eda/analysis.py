@@ -36,3 +36,44 @@ plt.title("Missing Energy vs m_wwbb")
 
 plt.savefig("correlation_plot.png")
 plt.show()
+
+signal = df[df["label"] == 1]
+background = df[df["label"] == 0]
+
+print("\nSignal events:", len(signal))
+print("Background events:", len(background))
+
+plt.figure(figsize=(10,6))
+
+plt.hist(
+    background["m_wwbb"],
+    bins=40,
+    alpha=0.5,
+    label="Background",
+    density=True
+)
+
+plt.hist(
+    signal["m_wwbb"],
+    bins=40,
+    alpha=0.5,
+    label="Signal",
+    density=True
+)
+
+plt.xlabel("m_wwbb")
+plt.ylabel("Density")
+plt.title("Signal vs Background: m_wwbb Distribution")
+plt.legend()
+
+plt.savefig("m_wwbb_signal_vs_background.png")
+plt.show()
+
+feature_means = df.groupby("label").mean()
+
+mean_difference = (
+    feature_means.loc[1] - feature_means.loc[0]
+).abs().sort_values(ascending=False)
+
+print("\nTop 10 features by absolute mean difference:")
+print(mean_difference.head(10))

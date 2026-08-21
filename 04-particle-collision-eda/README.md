@@ -36,20 +36,49 @@ The project explores the dataset using:
 
 The dataset contains:
 
-* **5,295 signal events**
-* **4,705 background events**
+- **5,295 signal events**
+- **4,705 background events**
 
 The classes are therefore relatively balanced.
 
-Among the selected features, the largest difference in mean values between signal and background events was observed for `missing_energy`.
+For the initially investigated features, the mean values of `lepton_pt`, `missing_energy`, and `m_wwbb` differ between signal and background events.
+
+Among these three features, `missing_energy` showed the largest absolute difference in mean values.
+
+### Correlation Analysis
 
 For the three investigated features:
 
-* `lepton_pt` and `missing_energy`: **r ≈ -0.147**
-* `lepton_pt` and `m_wwbb`: **r ≈ 0.142**
-* `missing_energy` and `m_wwbb`: **r ≈ 0.313**
+- `lepton_pt` and `missing_energy`: **r ≈ -0.147**
+- `lepton_pt` and `m_wwbb`: **r ≈ 0.142**
+- `missing_energy` and `m_wwbb`: **r ≈ 0.313**
 
 The strongest linear relationship among these selected variables was between `missing_energy` and `m_wwbb`, showing a positive but not strong correlation.
+
+### Signal vs Background
+
+The `m_wwbb` distributions for signal and background events overlap substantially, indicating that this feature alone does not clearly separate the two event classes.
+
+However, the distributions are not identical. Signal events are more concentrated around lower `m_wwbb` values, while the background distribution extends further toward higher values.
+
+This suggests that `m_wwbb` contains some information related to event type, although additional features would be needed for clearer separation.
+
+## Signal vs Background Analysis
+
+The dataset contains two event classes:
+
+- **Signal:** 5,295 events
+- **Background:** 4,705 events
+
+To explore whether physical features differ between the two event types, the distribution of `m_wwbb` was compared for signal and background events.
+
+![Signal vs Background m_wwbb Distribution](m_wwbb_signal_vs_background.png)
+
+The two distributions overlap substantially, which suggests that `m_wwbb` alone is not sufficient to clearly separate signal and background events.
+
+However, the distributions are not identical. Signal events are more concentrated around lower `m_wwbb` values, while the background distribution extends further toward higher values.
+
+This suggests that `m_wwbb` may contain useful information when combined with other collision features.
 
 ## Visualization
 
