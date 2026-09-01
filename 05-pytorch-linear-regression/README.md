@@ -75,4 +75,4 @@ Understanding PyTorch's training loop and automatic differentiation is therefore
 
 The complete implementation and training results are available in:
 
-`pytorch_linear_regression.ipynb`
+[View the PyTorch Linear Regression Notebook](./pytorch_linear_regression.ipynb)
