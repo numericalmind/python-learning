@@ -77,3 +77,58 @@ mean_difference = (
 
 print("\nTop 10 features by absolute mean difference:")
 print(mean_difference.head(10))
+
+top_10_features = mean_difference.head(10)
+plt.figure(figsize=(10,6))
+
+top_10_features.sort_values().plot(
+    kind="barh"
+)
+
+plt.xlabel("Absolute Mean Difference")
+plt.ylabel("Feature")
+plt.title("Top 10 Features Separating Signal and Background")
+
+plt.tight_layout()
+
+plt.savefig(
+     "top_10_feature_differences.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
+plt.show()
+
+plt.figure(figsize=(10,6))
+
+plt.hist(
+    background["m_bb"],
+    bins=40,
+    alpha=0.5,
+    label="Background",
+    density=True
+)
+
+plt.hist(
+    signal["m_bb"],
+    bins=40,
+    alpha=0.5,
+    label="Signal",
+    density=True
+)
+
+plt.xlabel("m_bb")
+plt.ylabel("Density")
+plt.title("Signal vs Background: m_bb Distribution")
+
+plt.legend()
+plt.tight_layout()
+
+plt.savefig(
+    "m_bb_signal_vs_background.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
+plt.show()
+
